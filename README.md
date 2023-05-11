@@ -2,16 +2,13 @@
 - Matias Díaz
 - Mateo Ciotti
 - Franco Beltrán
-- 
-
 
 ## Proyecto
-
 
 <img src="https://github.com/0Mateciotti/SPD-Jodo-2/blob/main/Jodo%202/Imagenes/adasd.PNG?raw=true" width="800"/>
 
 ## Descrpcion
-Este programa enciende y apaga las luces de un semaforo con sus respectivos tiempo junto con un buzzer que serviria para gente con problemas de vista
+Una vez tocado el boton, el programa pasara por cada "estacion" encendiendo su respectivo led y haciendo sonar el buzzer
 
 
 ## Funcion principal
@@ -33,7 +30,6 @@ Este programa enciende y apaga las luces de un semaforo con sus respectivos tiem
 #define SEGMENTOG 9
 #define BUZZER 2
 
-
 void setup()
 {
   pinMode(2,INPUT);
@@ -42,7 +38,6 @@ void setup()
   for(int i =2;i<=13;i++){
   
   	pinMode(i,OUTPUT);	
-  
   } 
 }
 
@@ -52,11 +47,8 @@ void loop()
   if(detectarBoton(digitalRead(A1)) == 1){
   
     secuencia();
-  }
- 	
+  }	
 }	
-
-
 
 int secuencia(){
 	
@@ -72,8 +64,7 @@ int secuencia(){
   	digitalWrite(ESTACION_1,LOW);
   	digitalWrite(SEGMENTOB,LOW);
   	digitalWrite(SEGMENTOC,LOW);
-    delay(1000);
-	
+	delay(1000);
   
   	//estacion 2
   	digitalWrite(ESTACION_2,HIGH);
@@ -94,8 +85,7 @@ int secuencia(){
   	digitalWrite(SEGMENTOG,LOW);
   	digitalWrite(SEGMENTOB,LOW);
  	digitalWrite(SEGMENTOA,LOW);
-    delay(1000);
-  
+        delay(1000);
   
   
   	//estacion 3 en proceso...
@@ -111,7 +101,6 @@ int secuencia(){
   	tone(2,1000,200);
   		
   
-  
   	delay(1000);
   	digitalWrite(ESTACION_3,LOW);
 	digitalWrite(SEGMENTOB,LOW);
@@ -119,8 +108,9 @@ int secuencia(){
   	digitalWrite(SEGMENTOG,LOW);
   	digitalWrite(SEGMENTOD,LOW);
   	digitalWrite(SEGMENTOA,LOW);
-    delay(1000);
+        delay(1000);
   	
+	
   	//estacion 4
  	digitalWrite(ESTACION_4,HIGH);
 	digitalWrite(SEGMENTOB,HIGH);
@@ -137,29 +127,21 @@ int secuencia(){
   	digitalWrite(SEGMENTOC,LOW);
   	digitalWrite(SEGMENTOG,LOW);
   	digitalWrite(SEGMENTOF,LOW);
-    delay(1000);
+        delay(1000);
 }
 
 int detectarBoton(int boton){
-
   int retorno;
   
   if(boton == 1){
-  
   	retorno = 1;
   
   }else{
   retorno = 0;
-    
+   
   }
-
   return retorno;
 }
-
-
-
-
-
 ~~~
 
 ## Links
