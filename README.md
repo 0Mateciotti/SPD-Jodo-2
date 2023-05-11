@@ -1,6 +1,6 @@
 ## Integrantes
-- Matias Díaz
 - Mateo Ciotti
+- Matias Díaz
 - Franco Beltrán
 
 ## Proyecto
